@@ -36,7 +36,7 @@ std::ostream& operator<<(std::ostream& out, const Date& date) {
 }
 
 Date& Date::operator++() {
-	if (day == dl[month - 1]) {
+	if (((*this).ifLeapYear() && month == 2) ? (day == 29) : (day == dl[month - 1])) {
 		day = 1;
 		if (month == 12) {
 			month = 1;
@@ -52,10 +52,12 @@ Date& Date::operator++() {
 	return *this;
 }
 
+// Nie chce mi sie robic leapyearow
 Date& Date::operator--() {
 	if (day == 1) {
 		day = dl[month - 2];
 		if (month == 1) {
+			day = 31;
 			month = 12;
 			--year;
 		}
@@ -95,8 +97,31 @@ bool Date::operator<(const Date& date) const {
 		return year < date.year;
 }
 
-int numberOfDays(const Date& d1, const Date& d2) {
+int numberOfDays(const Date& d1, const Date& d2) 
+{
 	Date d1c(d1);
 	Date d2c(d2);
-	return 0;
+	int iterator = 0;
+
+	if (d1c < d2c) {
+		while (!(d1c == d2c)) {
+			++d1c;
+			++iterator;
+		}
+	}
+	else {
+		while (!(d1c == d2c)) {
+			++d2c;
+			++iterator;
+		}
+	}
+
+	return iterator;
 }
+
+Date Date::operator++(int) {
+	Date temp{ *this };
+	++(*this);
+	return temp;
+}
+

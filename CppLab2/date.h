@@ -21,6 +21,7 @@ public:
 	Date& operator++();
 	Date& operator--();
 	Date& operator+=(int value);
+	Date operator++(int);
 	bool operator==(const Date& date) const;
 	bool operator<(const Date& date) const;
 
