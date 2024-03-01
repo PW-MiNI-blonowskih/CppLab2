@@ -75,6 +75,23 @@ int main()
 
 
 	cout << "----------   ETAP 7 (w laboratorium)  -------------------------" << endl << endl;
+	/*
+	cout << "d5=" << d5++ << " , kolejny : " << d5 << endl;
 
+	cout << "numer dnia w roku: " << d5() << endl;
+
+	d5 = 7 + d5;
+	cout << "d5=7+d5=" << d5 << endl;
+	d5 = d5 + 7;
+	cout << "d5=d5+7=" << d5 << endl;
+
+	int nr = 100;
+	d5(nr);
+	cout << "dzien o nr=" << nr << " (w tym samym roku)" << d5 << endl;
+
+	nr = 366;
+	d5(nr);
+	cout << "dzien o nr=" << nr << " (w tym samym roku)" << d5 << endl;
+	*/
 
 }
