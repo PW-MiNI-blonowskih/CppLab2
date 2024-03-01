@@ -96,6 +96,6 @@ bool Date::operator<(const Date& date) const {
 }
 
 int numberOfDays(const Date& d1, const Date& d2) {
-	// No idea actually gh
+	// No idea actually #test2
 	return 0;
 }
