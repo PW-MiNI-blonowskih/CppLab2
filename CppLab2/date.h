@@ -21,9 +21,10 @@ public:
 	Date& operator++();
 	Date& operator--();
 	Date& operator+=(int value);
-	Date operator++(int);
 	bool operator==(const Date& date) const;
 	bool operator<(const Date& date) const;
+	Date operator++(int);
+	int operator()();
 
 	friend std::ostream& operator<<(std::ostream& out, const Date& date);
 };

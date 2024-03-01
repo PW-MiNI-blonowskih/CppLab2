@@ -79,7 +79,7 @@ int main()
 	cout << "d5=" << d5++ << " , kolejny : " << d5 << endl;
 
 	cout << "numer dnia w roku: " << d5() << endl;
-
+	/*
 	d5 = 7 + d5;
 	cout << "d5=7+d5=" << d5 << endl;
 	d5 = d5 + 7;
@@ -92,6 +92,6 @@ int main()
 	nr = 366;
 	d5(nr);
 	cout << "dzien o nr=" << nr << " (w tym samym roku)" << d5 << endl;
-	
+	*/
 
 }
